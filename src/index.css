@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* colors */
+:root {
+  --light: #f8f9fa;
+  --dark: #181a1c;
+  --grey-light: #c0c0c0;
+  --grey: #696d7d;
+  /* --opal: #9cb9b9; */
+  --opal-light: #acd2cc;
+  --peachy: #e2b0a4;
+}
+
+/* Allow % based heights */
+html,
+body {
+  height: 100%;
+  color: --var(--dark);
+  background-color: var(--light);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow-wrap: break-word;
+}
+
+/* forms */
+form {
+  display: flex;
+  flex-direction: column;
+}
