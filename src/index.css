@@ -65,3 +65,12 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+.page-container {
+  margin: 1rem;
+}
+@media (min-width: 1024px) {
+  .page-container {
+    margin: 3rem;
+  }
+}
