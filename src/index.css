@@ -73,4 +73,11 @@ input {
 
 button {
   cursor: pointer;
+  border: none;
+  outline: none;
+  width: 150px;
+
+  font-family: "Roboto Mono", Menlo, monospace;
+  color: var(--light);
+  background-color: var(--dark);
 }

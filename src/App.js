@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import ForgotPassword from "./pages/ForgotPassword";
-// import ArtistProfile from "./pages/ArtistProfile";
+import ArtistProfile from "./pages/ArtistProfile";
 // import Navbar from "./components/Navbar";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
 
           {/* TODO: conditional redirect */}
-          <Route path="/artist-profile" element={<SignIn />} />
+          <Route path="/artist-profile" element={<ArtistProfile />} />
           <Route path="/artist-sign-in" element={<SignIn />} />
           <Route path="/artist-sign-up" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

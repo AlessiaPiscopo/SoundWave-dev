@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { styled } from "styled-components";
-import eyeOpenIcon from "../assets/icons/eyeOpenIcon.svg";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import eyeOpenIcon from "../assets/icons/eyeOpenIcon.svg";
+
+// TODO: add Error message: Error! Invalid email or password. Please try again.
 
 const SignIn = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // create a formData object with all input fields (instead of setting state for each field individually)
   const [formData, setFormData] = useState({
@@ -24,15 +26,39 @@ const SignIn = () => {
     }));
   };
 
+  // signInWithEmailAndPassword returns a promise, so we use an async function
+  const handleSubmit = async (ev) => {
+    ev.preventDefault();
+
+    try {
+      // initialize auth
+      const auth = getAuth();
+
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      // if user added successfully, redirect to profile
+      if (userCredential.user) {
+        navigate("/artist-profile");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className="page-container">
+        <Link to="/">SoundWave</Link>
         <header>
           <h1 className="page-header">Welcome Back</h1>
         </header>
 
         <main>
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type="email"
               className="email-input"
@@ -51,13 +77,13 @@ const SignIn = () => {
                 onChange={handleChange}
               />
 
-              <img
+              {/* <img
                 src={eyeOpenIcon}
                 alt="show password"
                 className="show-password"
                 onClick={() => setShowPassword((prevState) => !prevState)}
                 // onClick={() => setShowPassword(!showPassword)}
-              />
+              /> */}
             </div>
 
             <Link to="/forgot-password" className="forgot-password-link">

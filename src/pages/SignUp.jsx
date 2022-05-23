@@ -35,13 +35,15 @@ const SignUp = () => {
 
     try {
       const auth = getAuth();
+
+      // register user
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
 
-      // need this for our database
+      // get user from userCredential object–need this to add user to db
       const user = userCredential.user;
 
       // allow users to edit/update display name
@@ -49,13 +51,16 @@ const SignUp = () => {
         displayName: name,
       });
 
+      // since we don't want to change the formData state, we create a copy & remove password
       const formDataCopy = {
         ...formData,
       };
       delete formDataCopy.password;
       formDataCopy.timestamp = serverTimestamp();
 
-      // we use setDoc(), which requires us to explicity set an id, since we need matching user ids in Auth & Firestore
+      // add user to db
+      // setDoc(doc(db, coll, docID of our choosing), (data to insert)
+      // set docID = UID from Auth  the docID to user ID (UID) in Firebase Auth to link users to db
       await setDoc(doc(db, "users", user.uid), formDataCopy);
 
       // redirect to homepage

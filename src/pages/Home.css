@@ -14,6 +14,7 @@
     fixed;
   background-position: left;
   background-size: cover;
+  opacity: 75%;
   /* transform: scaleY(-1); */
 }
 
@@ -27,9 +28,8 @@
   align-items: center;
 
   position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 25vh;
+  top: 25vh;
+  left: 2rem;
 }
 
 .home .logo-text {
@@ -45,6 +45,8 @@
   margin-top: 5px; */
 }
 
-.home. .about-us-sub-headings {
-  padding: 0.5rem;
+.home .about-us-sub-headings {
+  width: 350px;
+  padding-top: 2rem;
+  font-style: italic;
 }
