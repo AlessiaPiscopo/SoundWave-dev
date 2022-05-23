@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { styled } from "styled-components";
 import eyeOpenIcon from "../assets/icons/eyeOpenIcon.svg";
 
 const SignIn = () => {
   // const navigate = useNavigate();
 
-  // create a formData object with all input fields (instead of setting the state for each field individually)
+  // create a formData object with all input fields (instead of setting state for each field individually)
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -15,7 +16,7 @@ const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   // dynamically sets the names and values for the new formData object
-  // [ev.target.id] receives the id of "email" or "password" (which we set in the <input> elements below)—this allows us to add as many more inputs as we want without the need to target each individual
+  // [ev.target.id] receives the id of "email" or "password" (which we set in the <input> elements below)—this allows us to add as many more inputs as we want without the need to target each individual field
   const handleChange = (ev) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -27,7 +28,7 @@ const SignIn = () => {
     <>
       <div className="page-container">
         <header>
-          <p className="page-header">Welcome Back</p>
+          <h1 className="page-header">Welcome Back</h1>
         </header>
 
         <main>
@@ -70,7 +71,7 @@ const SignIn = () => {
 
           <p>
             Don't have an account yet?{" "}
-            <Link to="/sign-up" className="sign-up-link">
+            <Link to="/artist-sign-up" className="sign-up-link">
               Sign Up
             </Link>
           </p>

@@ -69,7 +69,7 @@ const SignUp = () => {
     <>
       <div className="page-container">
         <header>
-          <p className="page-header">Sign Up</p>
+          <h1 className="page-header">Sign Up</h1>
         </header>
 
         <main>
@@ -116,9 +116,12 @@ const SignUp = () => {
 
           {/* Google OAuth */}
 
-          <Link to="/sign-in" className="registerLink">
-            Sign In Instead
-          </Link>
+          <p>
+            Already have an account?{" "}
+            <Link to="/artist-sign-in" className="sign-in-link">
+              Sign In
+            </Link>
+          </p>
         </main>
       </div>
     </>

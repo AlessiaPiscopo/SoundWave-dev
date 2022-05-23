@@ -18,8 +18,8 @@ function App() {
 
           {/* TODO: conditional redirect */}
           <Route path="/artist-profile" element={<SignIn />} />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/artist-sign-in" element={<SignIn />} />
+          <Route path="/artist-sign-up" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
       </Router>
