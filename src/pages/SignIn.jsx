@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { toast } from "react-toastify";
 // import eyeOpenIcon from "../assets/icons/eyeOpenIcon.svg";
 
 // TODO: add Error message: Error! Invalid email or password. Please try again.
@@ -45,7 +46,9 @@ const SignIn = () => {
         navigate("/artist-profile");
       }
     } catch (error) {
-      console.log(error);
+      toast.error("Error! Invalid email or password.", {
+        closeButton: false,
+      });
     }
   };
 
