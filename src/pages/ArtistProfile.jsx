@@ -39,7 +39,6 @@ const ArtistProfile = () => {
         });
 
         // updateDisplayName in Firestore
-
         // create a reference to the user doc
         const userRef = doc(db, "users", auth.currentUser.uid);
         await updateDoc(userRef, {
@@ -52,7 +51,6 @@ const ArtistProfile = () => {
     }
   };
 
-  // return user ? <h1>{user.displayName}</h1> : <h1>user not logged in</h1>;
   return (
     <div className="artist-profile">
       <header className="profile-header">
