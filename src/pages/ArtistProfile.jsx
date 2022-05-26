@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import { getAuth, updateProfile } from "firebase/auth";
@@ -53,6 +53,8 @@ const ArtistProfile = () => {
 
   return (
     <div className="artist-profile">
+      <Link to="/">SoundWave</Link>
+
       <header className="profile-header">
         <p className="page-header">My Profile</p>
         <button type="button" className="log-out-button" onClick={handleLogout}>

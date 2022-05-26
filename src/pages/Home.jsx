@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import Explore from "./Explore";
 import "./Home.css";
 
 const Home = () => {
@@ -30,6 +31,9 @@ const Home = () => {
         </button>
         <Link to="/artist-profile" style={{ color: "var(--light)" }}>
           My Profile
+        </Link>
+        <Link to="/explore" style={{ color: "var(--light)" }}>
+          Explore
         </Link>
       </main>
     </div>
