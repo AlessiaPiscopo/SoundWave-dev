@@ -1,0 +1,14 @@
+{
+  "artists": [
+    {
+      "artistName": "Alvvays",
+      "genres": ["indie rock", "alternative", "pop"],
+      "numAlbums": 1,
+      "albums": [
+        {
+          "albumName": "Alvvays"
+        }
+      ]
+    }
+  ]
+}

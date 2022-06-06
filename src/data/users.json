@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "Alvvays",
+      "displayName": "@AlicePhoebeLou",
+      "userType": "artist",
+      "userRef": "UID from Firebase Auth"
+    },
+    {
+      "name": "Jane Doe",
+      "displayName": "@janedoe",
+      "userType": "fan",
+      "userRef": "UID from Firebase Auth"
+    }
+  ]
+}

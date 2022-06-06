@@ -1,0 +1,70 @@
+.home {
+  /* margin: 1rem; */
+  min-height: 100vh;
+  background-color: var(--dark);
+  background: url("../assets/photos/guitarist-with-pedals.png") no-repeat center
+    center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.home .welcome-container {
+  min-width: 200px;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+
+  position: absolute;
+  top: 25vh;
+  left: 2rem;
+}
+
+.home .welcome-heading {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.home .logo-text {
+  font-size: 24px;
+  color: var(--opal-light);
+  font-family: Dokdo, serif;
+}
+
+.home .about-us {
+  color: var(--grey-light);
+  text-align: left;
+  /* margin-bottom: 75px;
+  margin-top: 5px; */
+}
+
+.home .about-us-sub-headings {
+  width: 350px;
+  padding-top: 2rem;
+  font-style: italic;
+}
+
+/* .sign-up-button,
+.sign-in-button {
+  border-radius: 2px;
+  box-shadow: 3px 4px 0 0 rgba(0, 0, 0, 1);
+  box-shadow: 3px 4px 0 0 #fff;
+  margin: 10px auto;
+  min-height: 40px;
+  padding: 12px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.sign-up-button:hover,
+.sign-in-button:hover {
+  transition: all 0.1s ease-in-out;
+  border: 1px solid #000;
+  box-shadow: 5px 6px 0 0 var(--opal-light);
+  color: #000;
+  left: 0;
+  top: 0;
+} */

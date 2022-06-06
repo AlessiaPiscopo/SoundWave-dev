@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import Explore from "./Explore";
-import "./Home.css";
+import "../styles/Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -9,32 +9,36 @@ const Home = () => {
     <div className="home">
       {/* <div className="wave-dark"></div> */}
 
-      <main className="welcome-container">
-        <h1 className="logo-text">SoundWave</h1>
-        <div className="about-us">
-          <h2 className="about-us-heading">
-            A space for independent musicians
-          </h2>
-        </div>
+      <main>
+        <div className="welcome-container">
+          <h1 className="welcome-heading">
+            Welcome to <span className="logo-text">SoundWave</span>
+          </h1>
+          <div className="about-us">
+            <h2 className="about-us-heading">
+              A space for independent musicians
+            </h2>
+          </div>
 
-        <button
-          className="sign-up-button"
-          onClick={() => navigate("/artist-sign-up")}
-        >
-          Sign Up
-        </button>
-        <button
-          className="sign-in-button"
-          onClick={() => navigate("/artist-sign-in")}
-        >
-          Sign In
-        </button>
-        <Link to="/artist-profile" style={{ color: "var(--light)" }}>
-          My Profile
-        </Link>
-        <Link to="/explore" style={{ color: "var(--light)" }}>
-          Explore
-        </Link>
+          {/* <button
+            className="sign-up-button"
+            onClick={() => navigate("/artist-sign-up")}
+          >
+            Sign Up
+          </button>
+          <button
+            className="sign-in-button"
+            onClick={() => navigate("/artist-sign-in")}
+          >
+            Sign In
+          </button>
+          <Link to="/artist-profile" style={{ color: "var(--light)" }}>
+            My Profile
+          </Link>
+          <Link to="/explore" style={{ color: "var(--light)" }}>
+            Explore
+          </Link> */}
+        </div>
       </main>
     </div>
   );
