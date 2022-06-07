@@ -5,6 +5,7 @@
   background-size: cover;
   min-height: 100vh;
   position: relative;
+  margin-top: -45px;
 }
 
 .home-content {
@@ -42,7 +43,6 @@
   font-size: 80px;
   color: var(--opal-light);
   margin-bottom: -30px;
-  color: var(--opal-light);
   -webkit-text-fill-color: rgba(16, 16, 16, 0);
   -webkit-text-stroke-color: var(--opal-light);
   -webkit-text-stroke-width: 2px;

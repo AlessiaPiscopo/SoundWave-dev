@@ -1,45 +1,19 @@
-import { Link, useNavigate } from "react-router-dom";
-import Explore from "./Explore";
-import "../styles/Home.css";
+import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="home">
-      {/* <div className="wave-dark"></div> */}
-
-      <main>
-        <div className="welcome-container">
-          <h1 className="welcome-heading">
-            Welcome to <span className="logo-text">SoundWave</span>
-          </h1>
-          <div className="about-us">
-            <h2 className="about-us-heading">
-              A space for independent musicians
-            </h2>
-          </div>
-
-          {/* <button
-            className="sign-up-button"
-            onClick={() => navigate("/artist-sign-up")}
-          >
-            Sign Up
-          </button>
-          <button
-            className="sign-in-button"
-            onClick={() => navigate("/artist-sign-in")}
-          >
-            Sign In
-          </button>
-          <Link to="/artist-profile" style={{ color: "var(--light)" }}>
-            My Profile
-          </Link>
-          <Link to="/explore" style={{ color: "var(--light)" }}>
-            Explore
-          </Link> */}
-        </div>
-      </main>
+      <div className="home-content">
+        <span className="logo-text">SoundWave</span>
+        <p className="slogan-heading">A space for independent artists.</p>
+        <p className="about-blurb">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          exercitationem labore dolores laboriosam doloribus atque accusantium
+          amet eaque ea porro, iste voluptatem id, accusamus, ex fuga hic
+          tenetur est ipsum.
+        </p>
+      </div>
     </div>
   );
 };
