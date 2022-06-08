@@ -12,6 +12,12 @@ import {
 
 const Navbar = () => {
   const navigate = useNavigate();
+
+  const activeStyle = {
+    // borderBottom: "3px solid var(--light)",
+    color: "var(--opal-light)",
+  };
+
   return (
     <>
       <StyledNavbar className="StyledNavbar">
@@ -20,10 +26,26 @@ const Navbar = () => {
           <LogoTextOutline to="/">SoundWave</LogoTextOutline>
 
           <NavItems>
-            <StyledNavLink to="/">_About</StyledNavLink>
-            <StyledNavLink to="/">_Explore</StyledNavLink>
-            <StyledNavLink to="/">_Placeholder</StyledNavLink>
-            <StyledNavLink to="/">_Contact</StyledNavLink>
+            <NavLink
+              to="/about"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              _About
+            </NavLink>
+
+            <NavLink
+              to="/explore"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              _Explore
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              _Contact
+            </NavLink>
 
             <SignInButton
               type="button"

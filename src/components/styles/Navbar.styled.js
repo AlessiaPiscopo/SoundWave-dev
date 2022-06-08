@@ -37,6 +37,7 @@ export const LogoTextOutline = styled(Link)`
 export const NavItems = styled.ul`
   display: flex;
   align-items: center;
+
   gap: 70px;
   font-weight: bold;
 `;
