@@ -1,50 +1,40 @@
-// import { useNavigate, useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { useAuthStatus } from "../hooks/useAuthStatus";
+import { NavLink, useNavigate } from "react-router-dom";
 
-import "../styles/Navbar.css";
+import {
+  StyledNavbar,
+  Nav,
+  LogoText,
+  LogoTextOutline,
+  NavItems,
+  StyledNavLink,
+  SignInButton,
+} from "./styles/Navbar.styled.js";
 
-// hide on Home page
 const Navbar = () => {
-  //   const navigate = useNavigate();
-  //   const location = useLocation();
-  const { loggedIn, checkingStatus } = useAuthStatus();
-
+  const navigate = useNavigate();
   return (
-    <nav className="styled-navbar">
-      <div className="navbar-container">
-        <div className="navbar-logo">SoundWave</div>
-        {/* <button className="nav-bars-icon"></button> */}
+    <>
+      <StyledNavbar className="StyledNavbar">
+        <Nav>
+          {/* <LogoText>SoundWave</LogoText> */}
+          <LogoTextOutline to="/">SoundWave</LogoTextOutline>
 
-        <ul className="nav-items">
-          {/* <li className="nav-item">
-              <Link className="navbar-logo" to="/">
-                SoundWave
-              </Link>
-            </li> */}
-          <li className="nav-item">
-            <Link className="navbar-link" to="/">
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="navbar-link" to="/">
-              Discover
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="navbar-link" to="/">
-              Contact
-            </Link>
-          </li>
+          <NavItems>
+            <StyledNavLink to="/">_About</StyledNavLink>
+            <StyledNavLink to="/">_Explore</StyledNavLink>
+            <StyledNavLink to="/">_Placeholder</StyledNavLink>
+            <StyledNavLink to="/">_Contact</StyledNavLink>
 
-          <div className="navbar-sign-in-button-container">
-            {" "}
-            <button className="navbar-sign-in-button">Sign In</button>
-          </div>
-        </ul>
-      </div>
-    </nav>
+            <SignInButton
+              type="button"
+              onClick={() => navigate("/artist-sign-in")}
+            >
+              Sign In
+            </SignInButton>
+          </NavItems>
+        </Nav>
+      </StyledNavbar>
+    </>
   );
 };
 

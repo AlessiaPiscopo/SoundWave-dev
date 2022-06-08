@@ -1,56 +1,43 @@
-import { Link, useNavigate } from "react-router-dom";
-import Explore from "./Explore";
-import "../styles/Home.css";
+import "./Home.css";
+import { FiArrowRight } from "react-icons/fi";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="home">
-      {/* <div className="wave-dark"></div> */}
-
-      <main>
-        <div className="welcome-container">
-          <h1 className="welcome-heading">
-            Welcome to <span className="logo-text">SoundWave</span>
-          </h1>
-          <div className="about-us">
-            <h2 className="about-us-heading">
-              A space for independent musicians
-            </h2>
-          </div>
-
-          {/* <button
-            className="sign-up-button"
-            onClick={() => navigate("/artist-sign-up")}
-          >
-            Sign Up
-          </button>
-          <button
-            className="sign-in-button"
-            onClick={() => navigate("/artist-sign-in")}
-          >
-            Sign In
-          </button>
-          <Link to="/artist-profile" style={{ color: "var(--light)" }}>
-            My Profile
-          </Link>
-          <Link to="/explore" style={{ color: "var(--light)" }}>
-            Explore
-          </Link> */}
+      <div className="home-content">
+        {/* <span className="logo-text">SoundWave</span> */}
+        <p className="home-heading">A space for independent artists.</p>
+        <p className="home-subheading">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          exercitationem labore dolores laboriosam doloribus atque accusantium
+          amet eaque ea porro, iste voluptatem id, accusamus, ex fuga hic
+          tenetur est ipsum.
+        </p>
+        <p className="home-subheading">
+          Iure exercitationem labore dolores laboriosam doloribus atque
+          accusantium amet eaque ea porro, iste voluptatem id, accusamus, ex
+          fuga hic tenetur est ipsum.
+        </p>
+        <p className="home-subheading">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui commodi
+          voluptates ex, similique consequuntur delectus distinctio doloribus
+          soluta voluptas est inventore atque provident. Odio nisi ad labore,
+          cumque fugiat magni?
+        </p>
+        <div className="buttons-row">
+          <button className="sign-up-button">Sign Up</button>
+          <button className="sign-in-button">Sign in</button>
+          <button className="sign-up-button">Learn More</button>
+          <FiArrowRight />
         </div>
-      </main>
+      </div>
     </div>
   );
 };
 
 export default Home;
 
-/* <div className="about-us-sub-headings">
-            <h3>
-              showcase your work, discover new music, support other artists, and
-              build meaningful connections.
-            </h3>
-          </div> */
+// showcase your work, discover new music, support other artists, and
+// build meaningful connections.
 
 /* Artists & Fans: An online record store and music community where passionate fans discover, connect with, and directly support the artists they love. */
