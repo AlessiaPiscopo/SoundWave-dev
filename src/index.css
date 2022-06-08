@@ -25,7 +25,7 @@ html,
 body {
   height: 100%;
   color: var(--light);
-  background-color: var(--light);
+  background-color: var(--dark);
 }
 
 body {
