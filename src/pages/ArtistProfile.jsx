@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import { getAuth, updateProfile } from "firebase/auth";
 import { doc, updateDoc } from "firebase/firestore";
-import { db } from "../firebase.config";
+import { db } from "../config/firebase.config";
 
 const ArtistProfile = () => {
   const navigate = useNavigate();

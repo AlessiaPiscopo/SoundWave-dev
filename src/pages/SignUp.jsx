@@ -7,7 +7,7 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { db } from "../firebase.config";
+import { db } from "../config/firebase.config";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 
 import eyeOpenIcon from "../assets/icons/eyeOpenIcon.svg";
@@ -116,9 +116,6 @@ const SignUp = () => {
                 // onClick={() => setShowPassword(!showPassword)}
               />
             </div>
-            <Link to="/forgot-password" className="forgot-password-link">
-              Forgot Password?
-            </Link>
 
             <button className="sign-in-button">Sign Up</button>
           </form>

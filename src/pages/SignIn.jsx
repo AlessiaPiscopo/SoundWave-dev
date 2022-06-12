@@ -55,7 +55,6 @@ const SignIn = () => {
   return (
     <>
       <div className="page-container">
-        <Link to="/">SoundWave</Link>
         <header>
           <h1 className="page-header">Welcome Back</h1>
         </header>

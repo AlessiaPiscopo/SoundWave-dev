@@ -21,15 +21,15 @@ export const Nav = styled.div`
 export const LogoTextOutline = styled(Link)`
   font-size: 48px;
   font-family: Dokdo, "Roboto Mono", monospace;
-  color: var(--opal-light);
+  color: var(--opal);
   -webkit-text-fill-color: rgba(16, 16, 16, 0);
-  -webkit-text-stroke-color: var(--opal-light);
+  -webkit-text-stroke-color: var(--opal);
   -webkit-text-stroke-width: 1.5px;
 
   &:hover {
-    color: var(--opal-light);
+    color: var(--opal);
     cursor: pointer;
-    -webkit-text-fill-color: var(--opal-light);
+    -webkit-text-fill-color: var(--opal);
     transition: ease-in 0.2s;
   }
 `;
@@ -44,9 +44,9 @@ export const NavItems = styled.ul`
 
 export const StyledNavLink = styled(NavLink)`
   &:hover {
-    color: var(--opal-light);
+    color: var(--opal);
     cursor: pointer;
-    -webkit-text-fill-color: var(--opal-light);
+    -webkit-text-fill-color: var(--opal);
     transition: ease-in 0.2s;
   }
 `;
@@ -59,7 +59,7 @@ export const SignInButton = styled.button`
 
   &:hover {
     color: var(--dark);
-    background-color: var(--opal-light);
+    background-color: var(--opal);
     border: 1px solid var(--dark);
     transition: ease-in 0.2s;
   }

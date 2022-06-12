@@ -43,11 +43,11 @@
 }
 
 .sign-up-button {
-  background-color: var(--opal-light);
+  background-color: var(--opal);
   color: var(--dark);
   padding: 10px 10px;
   font-weight: bold;
-  border: 1px solid var(--opal-light);
+  border: 1px solid var(--opal);
 }
 
 .sign-in-button {

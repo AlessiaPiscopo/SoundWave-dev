@@ -3,7 +3,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import {
   StyledNavbar,
   Nav,
-  LogoText,
   LogoTextOutline,
   NavItems,
   StyledNavLink,
@@ -15,7 +14,7 @@ const Navbar = () => {
 
   const activeStyle = {
     // borderBottom: "3px solid var(--light)",
-    color: "var(--opal-light)",
+    color: "var(--opal)",
   };
 
   return (
