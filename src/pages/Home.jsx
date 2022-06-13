@@ -1,37 +1,48 @@
-import "./Home.css";
-import { FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+
+import {
+  StyledHome,
+  ContentBox,
+  LogoText,
+  Heading,
+  SubHeading,
+  SignUpButton,
+} from "./styles/Home.styled";
+import { Container as PageContainer } from "../components/Container.styled";
+import { IoArrowForward } from "react-icons/io5";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="home">
-      <div className="home-content">
-        {/* <span className="logo-text">SoundWave</span> */}
-        <p className="home-heading">A space for independent artists.</p>
-        <p className="home-subheading">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          exercitationem labore dolores laboriosam doloribus atque accusantium
-          amet eaque ea porro, iste voluptatem id, accusamus, ex fuga hic
-          tenetur est ipsum.
-        </p>
-        <p className="home-subheading">
-          Iure exercitationem labore dolores laboriosam doloribus atque
-          accusantium amet eaque ea porro, iste voluptatem id, accusamus, ex
-          fuga hic tenetur est ipsum.
-        </p>
-        <p className="home-subheading">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui commodi
-          voluptates ex, similique consequuntur delectus distinctio doloribus
-          soluta voluptas est inventore atque provident. Odio nisi ad labore,
-          cumque fugiat magni?
-        </p>
-        <div className="buttons-row">
-          <button className="sign-up-button">Sign Up</button>
-          <button className="sign-in-button">Sign in</button>
-          <button className="sign-up-button">Learn More</button>
-          <FiArrowRight />
-        </div>
-      </div>
-    </div>
+    <StyledHome>
+      <PageContainer>
+        <ContentBox>
+          {/* <LogoText>SoundWave</LogoText> */}
+          <Heading>
+            Discover amazing new music and directly support the artists who make
+            it.
+          </Heading>
+          <SubHeading>
+            SoundWave is an online record store and music community where
+            passionate fans discover, connect with, and directly support the
+            artists they love.
+          </SubHeading>
+          <div>
+            <SignUpButton
+              type="button"
+              onClick={() => navigate("/artist-sign-in")}
+            >
+              Sign Up
+            </SignUpButton>
+            <span>
+              Learn More
+              <IoArrowForward />
+            </span>
+          </div>
+        </ContentBox>
+      </PageContainer>
+    </StyledHome>
   );
 };
 
@@ -41,3 +52,18 @@ export default Home;
 // build meaningful connections.
 
 /* Artists & Fans: An online record store and music community where passionate fans discover, connect with, and directly support the artists they love. */
+
+{
+  /* <div className="home">
+<div className="home-content">
+  <p className="home-heading">A space for independent artists.</p>
+  <p className="home-subheading">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
+    commodi voluptates ex, similique consequuntur delectus distinctio
+    doloribus soluta voluptas est inventore atque provident. Odio nisi
+    ad labore, cumque fugiat magni?
+  </p>
+  <button className="sign-up-button">Sign Up</button>
+</div>
+</div> */
+}

@@ -4,13 +4,14 @@ import "react-toastify/dist/ReactToastify.css";
 
 // pages & components
 import Home from "./pages/Home";
+// import Landing from "./pages/Landing";
+import Navbar from "./components/Navbar";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import ForgotPassword from "./pages/ForgotPassword";
 import ArtistProfile from "./pages/ArtistProfile";
 import Explore from "./pages/Explore";
 import PrivateRoute from "./components/PrivateRoute";
-import Navbar from "./components/Navbar";
 
 function App() {
   return (

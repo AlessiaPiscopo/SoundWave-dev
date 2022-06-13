@@ -1,9 +1,14 @@
+/* colors */
+
 :root {
   --light: #f8f9fa;
   --dark: #181a1c;
   --grey: #696d7d;
-  --opal: #9cb9b9;
+  --opal: #acd2cc;
+  /* --opal: #9cb9b9; */
 }
+
+/* reset */
 
 * {
   margin: 0;
@@ -12,7 +17,20 @@
 }
 
 body {
+  background-color: var(--dark);
+  -webkit-font-smoothing: antialiased;
   font-family: "Roboto Mono", Menlo, monospace;
   font-size: 16px;
-  color: var(--light);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

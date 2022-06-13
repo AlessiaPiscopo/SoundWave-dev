@@ -1,11 +1,16 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import { ReactComponent as SpiralIcon } from "../assets/graphics/noun-spiral.svg";
+import { Container } from "./Container.styled";
 
 import {
   StyledNavbar,
-  Nav,
-  LogoTextOutline,
+  Logo,
+  LogoText,
   NavItems,
   StyledNavLink,
+  Icons,
+  SearchIcon,
+  UserIcon,
   SignInButton,
 } from "./styles/Navbar.styled.js";
 
@@ -13,49 +18,47 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const activeStyle = {
-    // borderBottom: "3px solid var(--light)",
     color: "var(--opal)",
   };
 
   return (
-    <>
-      <StyledNavbar className="StyledNavbar">
-        <Nav>
-          {/* <LogoText>SoundWave</LogoText> */}
-          <LogoTextOutline to="/">SoundWave</LogoTextOutline>
+    <StyledNavbar className="StyledNavbar">
+      <Logo to="/">
+        <SpiralIcon width="32px" height="32px" />
+        {/* animation to make text appear from left on hover */}
+        <LogoText>SoundWave</LogoText>
+      </Logo>
 
-          <NavItems>
-            <NavLink
-              to="/about"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            >
-              _About
-            </NavLink>
+      <NavItems>
+        <StyledNavLink
+          to="/explore"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          _About
+        </StyledNavLink>
+        <StyledNavLink
+          to="/explore"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          _Explore
+        </StyledNavLink>
+        <StyledNavLink
+          to="/explore"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          _Contact
+        </StyledNavLink>
 
-            <NavLink
-              to="/explore"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            >
-              _Explore
-            </NavLink>
+        {/* <SignInButton type="button" onClick={() => navigate("/artist-sign-in")}>
+          Sign In
+        </SignInButton> */}
 
-            <NavLink
-              to="/contact"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            >
-              _Contact
-            </NavLink>
-
-            <SignInButton
-              type="button"
-              onClick={() => navigate("/artist-sign-in")}
-            >
-              Sign In
-            </SignInButton>
-          </NavItems>
-        </Nav>
-      </StyledNavbar>
-    </>
+        <Icons>
+          <SearchIcon />
+          <UserIcon />
+        </Icons>
+      </NavItems>
+    </StyledNavbar>
   );
 };
 
