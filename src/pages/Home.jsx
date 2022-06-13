@@ -1,15 +1,19 @@
 import { useNavigate } from "react-router-dom";
 
+// components
 import {
   StyledHome,
   ContentBox,
   LogoText,
   Heading,
   SubHeading,
+  LinksBottom,
   SignUpButton,
+  LearnMore,
 } from "./styles/Home.styled";
 import { Container as PageContainer } from "../components/Container.styled";
-import { IoArrowForward } from "react-icons/io5";
+
+import { IoChevronForward } from "react-icons/io5";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -25,21 +29,21 @@ const Home = () => {
           </Heading>
           <SubHeading>
             SoundWave is an online record store and music community where
-            passionate fans discover, connect with, and directly support the
+            passionate fans can discover, connect with, and directly support the
             artists they love.
           </SubHeading>
-          <div>
+          <LinksBottom>
             <SignUpButton
               type="button"
               onClick={() => navigate("/artist-sign-in")}
             >
-              Sign Up
+              _Sign Up
             </SignUpButton>
-            <span>
-              Learn More
-              <IoArrowForward />
-            </span>
-          </div>
+            <LearnMore to="/explore">
+              <span>_Learn More</span>
+              <IoChevronForward />
+            </LearnMore>
+          </LinksBottom>
         </ContentBox>
       </PageContainer>
     </StyledHome>
@@ -52,18 +56,3 @@ export default Home;
 // build meaningful connections.
 
 /* Artists & Fans: An online record store and music community where passionate fans discover, connect with, and directly support the artists they love. */
-
-{
-  /* <div className="home">
-<div className="home-content">
-  <p className="home-heading">A space for independent artists.</p>
-  <p className="home-subheading">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-    commodi voluptates ex, similique consequuntur delectus distinctio
-    doloribus soluta voluptas est inventore atque provident. Odio nisi
-    ad labore, cumque fugiat magni?
-  </p>
-  <button className="sign-up-button">Sign Up</button>
-</div>
-</div> */
-}

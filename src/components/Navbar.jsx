@@ -1,6 +1,5 @@
-import { NavLink, useNavigate } from "react-router-dom";
-import { ReactComponent as SpiralIcon } from "../assets/graphics/noun-spiral.svg";
-import { Container } from "./Container.styled";
+import { useNavigate } from "react-router-dom";
+import { ReactComponent as SpiralIcon } from "../assets/icons/spiralIcon.svg";
 
 import {
   StyledNavbar,
@@ -11,12 +10,9 @@ import {
   Icons,
   SearchIcon,
   UserIcon,
-  SignInButton,
 } from "./styles/Navbar.styled.js";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
   const activeStyle = {
     color: "var(--opal)",
   };
@@ -25,7 +21,7 @@ const Navbar = () => {
     <StyledNavbar className="StyledNavbar">
       <Logo to="/">
         <SpiralIcon width="32px" height="32px" />
-        {/* animation to make text appear from left on hover */}
+        {/* add animation to make text appear from left on hover */}
         <LogoText>SoundWave</LogoText>
       </Logo>
 
@@ -36,12 +32,14 @@ const Navbar = () => {
         >
           _About
         </StyledNavLink>
+
         <StyledNavLink
           to="/explore"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           _Explore
         </StyledNavLink>
+
         <StyledNavLink
           to="/explore"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -49,13 +47,9 @@ const Navbar = () => {
           _Contact
         </StyledNavLink>
 
-        {/* <SignInButton type="button" onClick={() => navigate("/artist-sign-in")}>
-          Sign In
-        </SignInButton> */}
-
         <Icons>
           <SearchIcon />
-          <UserIcon />
+          {/* <UserIcon /> */}
         </Icons>
       </NavItems>
     </StyledNavbar>

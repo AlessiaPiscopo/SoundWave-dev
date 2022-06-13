@@ -1,6 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { useAuthStatus } from "../hooks/useAuthStatus";
-import LoadingSpinner from "./LoadingSpinner";
 
 const PrivateRoute = () => {
   // destructure useAuthStatus
@@ -8,7 +7,7 @@ const PrivateRoute = () => {
 
   if (checkingStatus) {
     // TODO: loading spinner
-    return <LoadingSpinner />;
+    return <div>Loading...</div>;
   }
 
   // if no user is logged in, redirect to sign-in page
