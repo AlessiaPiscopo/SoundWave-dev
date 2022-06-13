@@ -1,5 +1,7 @@
 # SoundWave
 
+![Screenshot-1](sw-screenshot.png)
+
 Inspired by Bandcamp, SoundWave is an online music community where independent musicians can showcase their work, discover new music, and build meaningful connections with other artists.
 
 Capstone project for the Concordia University Web Development Diploma. This project is a _work in progress_ with many more features to come as I continue to learn and develop my skills!
@@ -11,10 +13,6 @@ Capstone project for the Concordia University Web Development Diploma. This proj
 - Firebase - Firestore Database, Authentication, Storage
 - Spotify Web API & REST API principles
 - HTML/CSS, Styled Components
-
-## Screenshots
-
-![Screenshot-1](sw-screenshot.png)
 
 ## Features
 
