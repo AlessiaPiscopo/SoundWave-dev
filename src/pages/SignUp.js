@@ -10,7 +10,7 @@ import {
 import { db } from "../config/firebase.config";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 
-import eyeOpenIcon from "../assets/icons/eyeOpenIcon.svg";
+import eyeOpenIcon from "../assets/svg/eyeOpenIcon.svg";
 
 const SignUp = () => {
   const navigate = useNavigate();

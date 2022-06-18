@@ -1,26 +1,34 @@
-/* colors */
-
+/* COLORS */
 :root {
   --light: #f8f9fa;
   --dark: #181a1c;
   --grey: #696d7d;
   --opal: #acd2cc;
   /* --opal: #9cb9b9; */
+  --pink: #ff5679;
 }
 
-/* reset */
-
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
   box-sizing: border-box;
+  font-size: 16px;
+
+  /* 10px/16px = 62.5% -> 1rem = 10px; */
+  /* font-size: 62.5%; */
 }
 
 body {
+  font-family: "Roboto Mono", Menlo, monospace;
+  color: var(--light);
   background-color: var(--dark);
   -webkit-font-smoothing: antialiased;
-  font-family: "Roboto Mono", Menlo, monospace;
-  font-size: 16px;
 }
 
 button {

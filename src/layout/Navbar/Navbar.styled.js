@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
 // components
-import { Button } from "../Button.styled";
-import { Container } from "../Container.styled";
+import { Button } from "../../components/Button.styled";
+import { Container } from "../../components/Container.styled";
 
 import { IoSearchSharp } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
@@ -32,7 +32,7 @@ export const LogoText = styled.span`
   font-size: 48px;
   font-family: Dokdo, "Roboto Mono", monospace;
   color: var(--opal);
-  /* -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: var(--opal);
   margin-left: 10px;

@@ -4,8 +4,9 @@ export const Button = styled.button`
   width: 150px;
   background-color: transparent;
   border: 1px solid var(--dark);
-  border-radius: 3px;
+  /* border-radius: 3px; */
   padding: 10px 10px;
+  box-shadow: 4px 4px;
   /* font-weight: bold; */
   /* font-size: 16px; */
 

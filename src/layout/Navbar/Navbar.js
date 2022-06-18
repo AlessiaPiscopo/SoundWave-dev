@@ -1,5 +1,4 @@
-import { useNavigate } from "react-router-dom";
-import { ReactComponent as SpiralIcon } from "../assets/icons/spiralIcon.svg";
+import { ReactComponent as SpiralIcon } from "../../assets/svg/spiralIcon.svg";
 
 import {
   StyledNavbar,
@@ -10,7 +9,7 @@ import {
   Icons,
   SearchIcon,
   UserIcon,
-} from "./styles/Navbar.styled.js";
+} from "./Navbar.styled";
 
 const Navbar = () => {
   const activeStyle = {

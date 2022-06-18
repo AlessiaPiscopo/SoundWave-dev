@@ -10,8 +10,8 @@ import {
   LinksBottom,
   SignUpButton,
   LearnMore,
-} from "./styles/Home.styled";
-import { Container as PageContainer } from "../components/Container.styled";
+} from "./Home.styled";
+import { Container as PageContainer } from "../../components/Container.styled";
 
 import { IoChevronForward } from "react-icons/io5";
 

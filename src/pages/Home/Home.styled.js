@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { Button } from "../../components/Button.styled";
 
-import bgImg from "../../assets/images/guitarist-from-back.png";
+import bgImg from "../../assets/img/guitarist-from-back.png";
 
 export const StyledHome = styled.div`
   height: 100vh;
@@ -66,7 +66,7 @@ export const LearnMore = styled(SignUpButton)`
   gap: 7px;
   margin-left: 30px;
   color: var(--light);
-  border: 1px solid var(--grey);
+  border: 1px solid var(--light);
 
   &:hover {
     border: 1px solid var(--light);

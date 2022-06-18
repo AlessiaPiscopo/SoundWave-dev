@@ -3,9 +3,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // pages & components
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 // import Landing from "./pages/Landing";
-import Navbar from "./components/Navbar";
+import Navbar from "./layout/Navbar/Navbar";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import ForgotPassword from "./pages/ForgotPassword";
