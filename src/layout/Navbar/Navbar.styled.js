@@ -35,7 +35,7 @@ export const LogoText = styled.span`
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: var(--opal);
-  margin-left: 10px;
+  margin-left: 16px;
 `;
 
 export const NavItems = styled.ul`

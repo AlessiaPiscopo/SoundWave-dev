@@ -1,2 +1,1 @@
 - [ ] convert px to rem
-- [ ] fix css color variables

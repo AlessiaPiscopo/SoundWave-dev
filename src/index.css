@@ -1,10 +1,14 @@
-/* COLORS */
+/* ---- spacing system (rem) - 0.2 / 0.4 / 0.8 / 1.2 / 1.6 / 2.4 / 3.2 / 4.8 / 6.4 / 8 / 9.6 / 12.8 */
+
+/* ---- font size system (rem) - 1 / 1.2 / 1.4 / 1.6 / 1.8 / 2 / 2.4 / 3 / 3.6 / 4.4 / 5.2 / 6.2 / 7.4 / 8.6 / 9.8 */
+
 :root {
+  /* colors */
+
   --light: #f8f9fa;
   --dark: #181a1c;
   --grey: #696d7d;
-  --opal: #acd2cc;
-  /* --opal: #9cb9b9; */
+  --opal: #9cb9b9;
   --pink: #ff5679;
 }
 
@@ -18,17 +22,20 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  min-height: 100%;
 
-  /* 10px/16px = 62.5% -> 1rem = 10px; */
-  /* font-size: 62.5%; */
+  /* set 1rem = 10px instead of default 16px (10px/16px = 62.5%) */
+  font-size: 62.5%;
 }
 
 body {
-  font-family: "Roboto Mono", Menlo, monospace;
+  font-family: Helvetica, Arial, sans-serif;
   color: var(--light);
-  background-color: var(--dark);
+  font-size: 1.6rem;
+  line-height: 1.25;
   -webkit-font-smoothing: antialiased;
+
+  background-color: var(--light);
 }
 
 button {
